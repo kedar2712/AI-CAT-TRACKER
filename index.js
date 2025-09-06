@@ -48,7 +48,7 @@ exports.generateWeeklyReport = onCall({
     throw new HttpsError("unauthenticated", "Must be called while authenticated.");
   }
 
-  const genAI = new GoogleGenerAIs(process.env.GEMINI_KEY);
+  const genAI = new GoogleGenerativeAI(process.env.GEMINI_KEY);
   const db = admin.firestore();
   const userId = request.auth.uid;
   
