@@ -39,7 +39,7 @@ if (import.meta.env.MODE === 'development') {
   
   // Connect to local emulators
   const functions = firebase.app().functions("us-central1");
-  functions.useEmulator("localhost", 5001);
+  functions.useEmulator("127.0.0.1", 5001);
 
 } else {
   // 2. We are in production mode (after 'npm run build')
